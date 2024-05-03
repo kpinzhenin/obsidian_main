@@ -1,0 +1,194 @@
+{
+  "main": {
+    "id": "23636bb8a3c628e0",
+    "type": "split",
+    "children": [
+      {
+        "id": "75680616809281d0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9fa9fcb51675c1e0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Caddy_duo_7.2/CAN protocol.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "afe7ca745683c943",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "create a linkd sdsdsd.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f6953d580fec1296",
+    "type": "split",
+    "children": [
+      {
+        "id": "781614a0ec75e883",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "89b4f088afd8e15b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d10c1d9eea1aa833",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e0001d7a81edbb0d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200.5
+  },
+  "right": {
+    "id": "74e161c910635cde",
+    "type": "split",
+    "children": [
+      {
+        "id": "ba0415f41d07c8a3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1d1dc906dcb686fc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "create a linkd sdsdsd.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0f105a0cb81c239f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "create a linkd sdsdsd.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d8aaf777d0d3f30b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e23b8b6423116144",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "create a linkd sdsdsd.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "afe7ca745683c943",
+  "lastOpenFiles": [
+    "O-notation.md",
+    "C summary.md",
+    "Caddy_duo_7.2/Phase_2R_isr_start_stop_with_working_time_limit.png",
+    "Caddy_duo_7.2/Pasted image 20240305180455.png",
+    "Caddy_duo_7.2/Pasted image 20240305122513.png",
+    "create a linkd sdsdsd.md",
+    "Caddy_duo_7.2/CAN protocol.md",
+    "Caddy_duo_7.2/Tx_0xf0f.png",
+    "Caddy_duo_7.2/Caddy CAN monitor using.md",
+    "Caddy_duo_7.2/c72duo_io.png",
+    "source_code/Problem_F.md",
+    "source_code/Problem_FS.md",
+    "source_code/Problem_GCD.md",
+    "source_code/Problem_ns.md",
+    "code/Problem_ns.md",
+    "source_code",
+    "code",
+    "obsidian_main/obsidian_alg/Конспект Си.md",
+    "obsidian_main/obsidian_alg",
+    "obsidian_main/code/Problem_ns.md",
+    "obsidian_main/code",
+    "obsidian_main",
+    "Welcome.md",
+    "Caddy_duo_7.2/c72duo_io.png.crdownload",
+    "Caddy_duo_7.2",
+    "add.c",
+    "source code/add 1.c",
+    "source code/add.c"
+  ]
+}
