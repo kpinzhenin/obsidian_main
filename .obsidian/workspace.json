@@ -1,0 +1,253 @@
+{
+  "main": {
+    "id": "103a64fc88c0b5c4",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e08340d7640d200",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7fc65d3e9d4ef920",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "tmp/version_curl.png"
+              },
+              "icon": "lucide-image",
+              "title": "version_curl"
+            }
+          },
+          {
+            "id": "81fd64a3bf48e1ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bash/objdump.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "objdump"
+            }
+          },
+          {
+            "id": "ea7c5d253ddb8be8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "readelf.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "readelf"
+            }
+          },
+          {
+            "id": "c03cbabb8a9208a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Git/_summery.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "_summery"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9b4f0a885550e2a9",
+    "type": "split",
+    "children": [
+      {
+        "id": "709a4173e744b7c4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2e5d067ec11fc6e1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "eaa87e1dcd5c0054",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "525e14aa6ca13394",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 306.5
+  },
+  "right": {
+    "id": "5ef8a97c71b88c05",
+    "type": "split",
+    "children": [
+      {
+        "id": "65974bc6ad6e81e4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a47bce7cc9fe0d3e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Регулярные выражения.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Регулярные выражения"
+            }
+          },
+          {
+            "id": "36c3df963a843f30",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "VIM/window.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from window"
+            }
+          },
+          {
+            "id": "a534521c70f53ca3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d148cca43ca7c9c0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "VIM/window.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of window"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "c03cbabb8a9208a5",
+  "lastOpenFiles": [
+    "tmp/README.md",
+    "tmp/README_5.md",
+    "tmp/README_4.md",
+    "tmp/README_3.md",
+    "tmp/README_2.md",
+    "Git/_summery.md",
+    "Git/checkout.md",
+    "Git/fitch.md",
+    "Git/link to push.md",
+    "Git/log.md",
+    "Git/merge.md",
+    "Git/push.md",
+    "Git/remote.md",
+    "gcc/_summary.md",
+    "ASM/NASM/var declaration.md",
+    "ASM/NASM/call external func.md",
+    "ASM/NASM/_summary.md",
+    "ASM/registers.md",
+    "ASM/_summary.md",
+    "gcc/preprocessor.md",
+    "Регулярные выражения.md",
+    "POSIX/Socket.md",
+    "POSIX/Unix_socket.png",
+    "VIM/Find.md",
+    "POSIX/Pipe.md",
+    "POSIX/FIFO.md",
+    "POSIX/Process.md",
+    "ARM",
+    "pkg-config",
+    "Debug tools",
+    "Cu/extend_libraries/GObject",
+    "POSIX",
+    "GTK",
+    "Bash/apt",
+    "Cu/extend_libraries/GLib",
+    "Cu/extend_libraries",
+    "tmp/configure_res.png",
+    "tmp/cmd_configure.png",
+    "tmp/version_curl.png",
+    "tmp/Screenshot from 2024-10-26 23-41-12.png",
+    "tmp",
+    "Interfaces/Pasted image 20240902210613.png",
+    "Interfaces/Pasted image 20240902210442.png",
+    "Interfaces/Pasted image 20240902210434.png"
+  ]
+}

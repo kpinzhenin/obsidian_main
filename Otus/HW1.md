@@ -1,0 +1,1 @@
+cat file1.rar file2.jpg > file3
