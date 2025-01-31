@@ -177,6 +177,8 @@
   },
   "active": "c03cbabb8a9208a5",
   "lastOpenFiles": [
+    "make/summary.md",
+    "Cu/extend_libraries/GObject/GObject.md",
     "Cu/extend_libraries/GLib/GLib.md",
     "GTK/_summary.md",
     "GTK/GtkApplication.md",
@@ -200,9 +202,7 @@
     "Cu/file/fopen.md",
     "Cu/file/Flexible Array Member (FAM).md",
     "Cu/file/fflush.md",
-    "Cu/extend_libraries/GObject/GObject.md",
     "Cu/construct/sizeof.md",
-    "tmp/README.md",
     "POSIX/Unix_socket.png",
     "ARM",
     "pkg-config",
