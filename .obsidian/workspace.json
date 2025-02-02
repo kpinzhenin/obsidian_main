@@ -53,12 +53,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/_summery.md",
+                "file": "Git/push.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_summery"
+              "title": "push"
             }
           }
         ],
@@ -205,19 +205,23 @@
   },
   "active": "c03cbabb8a9208a5",
   "lastOpenFiles": [
+    "obsidian_alg/Конспект Си.md",
+    "obsidian_alg",
+    "code/Problem_ns.md",
+    "code",
+    "Git/remote.md",
+    "Git/_summery.md",
     "tmp/README.md",
     "tmp/README_5.md",
     "tmp/README_4.md",
     "tmp/README_3.md",
     "tmp/README_2.md",
-    "Git/_summery.md",
     "Git/checkout.md",
     "Git/fitch.md",
     "Git/link to push.md",
     "Git/log.md",
     "Git/merge.md",
     "Git/push.md",
-    "Git/remote.md",
     "gcc/_summary.md",
     "ASM/NASM/var declaration.md",
     "ASM/NASM/call external func.md",
@@ -230,8 +234,6 @@
     "POSIX/Unix_socket.png",
     "VIM/Find.md",
     "POSIX/Pipe.md",
-    "POSIX/FIFO.md",
-    "POSIX/Process.md",
     "ARM",
     "pkg-config",
     "Debug tools",
@@ -240,12 +242,10 @@
     "GTK",
     "Bash/apt",
     "Cu/extend_libraries/GLib",
-    "Cu/extend_libraries",
     "tmp/configure_res.png",
     "tmp/cmd_configure.png",
     "tmp/version_curl.png",
     "tmp/Screenshot from 2024-10-26 23-41-12.png",
-    "tmp",
     "Interfaces/Pasted image 20240902210613.png",
     "Interfaces/Pasted image 20240902210442.png",
     "Interfaces/Pasted image 20240902210434.png"
