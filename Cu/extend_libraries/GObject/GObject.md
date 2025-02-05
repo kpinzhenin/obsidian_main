@@ -7,8 +7,24 @@ $(pkg-config gobject-2.0 --cflags --libs)
 Процесс создания потомка класса `GObject` :
 1. Регистрация нового типа в `системе типов`
 	 Регистрация класса производится функцией [[g_type_register_static ()]] которая возращает структуру типа `GType` - которая возвраащется при вызове функции `<namespace name>_<name>_get_type()` которая будте обернута в макрос `<NAMESPACE NAME>_TYPE_NAME ()`. 
-	Cамый примичательный это аргумент функции [[GTypeInfo]]. Структура долдна быть созданна перед "регистрацией"
-	
+	Cамый примичательный это аргумент функции [[GTypeInfo]]. Структура должна быть созданна перед "регистрацией"
+2. `Система типов` выделяет память для "собственного" класса и экземпляра класса. По сути это делает функция `g_type_register_static(G_TYPE_OBJECT, "<Name space><Name>, *GTypenfo, 0 )`. Выделяемая память описывается в структуре типа GTypeInfo.
+3. Инициализация Класса. объявление функции `<namespace name>_<name>_class_init( <Namespace name><Name>Class *class )`
+4. Инициализация экземпляра класса. `<namespace name>_<name>_init (<Namespace name><Name> *self )`
+
+Весь вышеописанный процесс упрощается макросом `G_DEFINE_TYPE(<Name space><Name>, <name_space>_<name>, G_TYPE_OBJECT)`. 	
+	Макрос применяется после опеределения:
+	 -  структуры класса`_<Namespace name><Name>Class` псевдонимом `<Namespace name><Name>Class`
+	 - структуры экземпляра класса `_<Namespace name><Name>` псевдонимом `<NameSpace><Name>`
+
+Для определения законченного типа ( который не будет порождать производные типы ) используется макрос `G_DECLARE_FINAL_TYPE`.
+	 При этом все равно нужно объявлять макрос для "получения типа" и структуру, опичывающую "потомка класса". Порядок вызовы следующий:
+	  - `#define <Namespace name>_TYPE_<name> (<namespace name>_<name>_get_type() )`
+	  - `G_DECLARE_FINAL_TYPE (<Namespace name><Name>, <namespace name>_<name>, <NAMESPACE_NAME>, <NAME>, GObject )`
+	  - `struct _<Namespace name><Name> { GObject parent; <self type field name>; }`
+	  - `G_DEFINE_TYPE ( <Namespace name><Name>, <namespace name>_<name>, G_TYPE_OBJECT )`
+	  - определение функции инициализации класса `static void <spacename name>_<name>_class_init ( <Spacename name><Name>Class *class )`
+	  - определение функции инициализации экземпляра класса `static void <spacename name>_<name>_init ( <Spacename name><Name> *self )`
 
 GObject instance is created with `g_object_new` function. GObject has not only instances but also classes (подразумевается, что память под объект класса выделяется при первом вызове). однако `g_object_new` возвращает указатель только на сам экземпляр класса, но не на сам класс.
 - A class of GObject is created at the first call of `g_object_new`. And there exists only one GObject class.
