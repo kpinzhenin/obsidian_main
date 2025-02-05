@@ -14,17 +14,23 @@ $(pkg-config gobject-2.0 --cflags --libs)
 
 Весь вышеописанный процесс упрощается макросом `G_DEFINE_TYPE(<Name space><Name>, <name_space>_<name>, G_TYPE_OBJECT)`. 	
 	Макрос применяется после опеределения:
-	 -  структуры класса`_<Namespace name><Name>Class` псевдонимом `<Namespace name><Name>Class`
+	 -  структуры класса`_<Namespace name><Name>Class` псевдонимом `<Namespace name><Name>Class`. Не нужно в случае объявления DERIVABLE класса макросом `G_DECLARE_DERIVABLE_TYPE`
 	 - структуры экземпляра класса `_<Namespace name><Name>` псевдонимом `<NameSpace><Name>`
 
 Для определения законченного типа ( который не будет порождать производные типы ) используется макрос `G_DECLARE_FINAL_TYPE`.
-	 При этом все равно нужно объявлять макрос для "получения типа" и структуру, опичывающую "потомка класса". Порядок вызовы следующий:
+	При этом все равно нужно объявлять макрос для "получения типа" и структуру, опичывающую "потомка класса". Порядок вызовы следующий:
 	  - `#define <Namespace name>_TYPE_<name> (<namespace name>_<name>_get_type() )`
 	  - `G_DECLARE_FINAL_TYPE (<Namespace name><Name>, <namespace name>_<name>, <NAMESPACE_NAME>, <NAME>, GObject )`
 	  - `struct _<Namespace name><Name> { GObject parent; <self type field name>; }`
 	  - `G_DEFINE_TYPE ( <Namespace name><Name>, <namespace name>_<name>, G_TYPE_OBJECT )`
 	  - определение функции инициализации класса `static void <spacename name>_<name>_class_init ( <Spacename name><Name>Class *class )`
 	  - определение функции инициализации экземпляра класса `static void <spacename name>_<name>_init ( <Spacename name><Name> *self )`
+	При этом макрос объявляет:
+	  - функцию `<spacename name>_<name>_get_type()` именно объявляет, не определяет
+	  - псевдоним структуры `<Spacename name><Name>` как `_<Space name><Name>`. Так же только объявление. Определение структуры `_<Space name><Name>` нужно реализовать.
+	  - макрос `<SPACENAME_NAME>_<NAME>()` приведения типа `obj` к `<Spacename><Name>`
+	  - макрос `<SPACENAME NAME_IS_<NAME>()` проверяет является ли `obj` экземпляром класса `<Spacename name>`
+	  - определение класса `_<Spacename name><Name>Class`
 
 GObject instance is created with `g_object_new` function. GObject has not only instances but also classes (подразумевается, что память под объект класса выделяется при первом вызове). однако `g_object_new` возвращает указатель только на сам экземпляр класса, но не на сам класс.
 - A class of GObject is created at the first call of `g_object_new`. And there exists only one GObject class.
