@@ -1,1 +1,1 @@
-for auto complete tag press Ctrl+x+]
+for auto complete tag press Ctrl+x+p
