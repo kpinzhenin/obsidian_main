@@ -82,6 +82,86 @@ DEPRICACTED*/
 /* without backward compatibility */
 #define configENABLE_BACKWARD_COMPATIBILITY     0
 
+/* Count of Thread Local Storage, like global var */
+#define configNUM_THREAD_LOCAL_STORAGE_POINTERS 5
+
+/* for some optimisation use some marker of start and end of modes marker int FreeRTOS  */
+#define configUSE_MINI_LIST_ITEM                1
+
+/* set type for specify the stack depth */
+#define configSTACK_DEPTH_TYPE                  uint16_t
+
+/* default value is "size_t". if message's len shortly then 255 
+it can be specify by uint8_t*/
+#define configMESSAGE_BUFFER_LENGTH_TYPE        size_t
+
+/* blocks of memory, allocated by pvPortMalloc() will be cleared when usnig vPortFree(). Recomended to set 1 */
+#define configHEAP_CLEAR_MEMORY_ON_FREE         1
+
+/* for simple not use. is set to 1 then RTOS objects can be created using RAM provided by the application writer. */
+#define configSUPPORT_STATIC_ALLOCATION         0
+
+/* set to 1 then RTOS objects can be created using RAM that is automatically allocated from the FreeRTOS heap */
+#define configSUPPORT_DYNAMIC_ALLOCATION        1
+
+/* total amount of RAM available in the FreeRTOS heap.
+Only used for dynamic allocation. in byte ? */
+#define configTOTAL_HEAP_SIZE                   (size_t) (512 * 18)
+
+/* heap placed by FreeRTOS  */
+#define configAPPLICATION_ALLOCATED_HEAP        0
+
+/* don't need to realize pvPortMallocStack() and vPortFreeStack()*/
+#define configSTACK_ALLOCATION_FROM_SEPARATE_HEAP 0
+
+/* HOOK FUNCTION RELATED DEFINITIONS */
+#define configUSE_IDLE_HOOK                     0
+#define configUSE_TICK_HOOK                     0
+#define configCHECK_FOR_STACK_OVERFLOW          0
+#define configUSE_MALLOC_FAILED_HOOK            0
+#define configUSE_DAEMON_TASK_STARTUP_HOOK      0
+#define configUSE_SB_COMPLETED_CALLBACK         0
+
+/* not generate RUN time statistic */
+#define configGENERATE_RUN_TIME_STATS           0
+#define configUSE_TRACE_FACILITY                0
+#define configUSE_STATS_FORMATTING_FUNCTIONS    0 
+
+/* don't use co-routine */
+#define configUSE_CO_ROUTINES                   0
+#define configMAX_CO_ROUTINE_PRIORITIES         1
+
+/* don't use software timers */
+#define configUSE_TIMERS                        0
+#define configTIMER_TASK_PRIORITY               3
+#define configTIMER_QUEUE_LENGTH                ( configMINIMAL_STACK_SIZE * 2 )
+
+/* Interrupt priorities used by the kernel port layer itself. These are genericto all Cortex-M ports, and do not rely on any particular library functions. */
+#define configKERNEL_INTERRUPT_PRIORITY ( configLIBRARY_LOWEST_INTERRUPT_PRIORITY << (8 - configPRIO_BITS) )
+
+/* !!!! configMAX_SYSCALL_INTERRUPT_PRIORITY must not be set to zero !!!!
+See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html. */
+#define configMAX_SYSCALL_INTERRUPT_PRIORITY ( configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY << (8 - configPRIO_BITS) )
+
+/* Normal assert() semantics without relying on the provision of an assert.h header file. */
+#define configASSERT( x ) if( ( x ) == 0 ) { taskDISABLE_INTERRUPTS(); for( ;; ); }
+
+
+/* Set the following definitions to 1 to include the API function, or zero 
+to exclude the API function. */
+#define INCLUDE_vTaskPrioritySet 1
+#define INCLUDE_uxTaskPriorityGet 1
+#define INCLUDE_vTaskDelete 1
+#define INCLUDE_vTaskCleanUpResources 1
+#define INCLUDE_vTaskSuspend 1
+#define INCLUDE_vTaskDelayUntil 1
+#define INCLUDE_vTaskDelay 1
+
+/* Definitions that map the FreeRTOS port interrupt handlers to their CMSIS
+standard names. */
+#define vPortSVCHandler SVC_Handler
+#define xPortPendSVHandler PendSV_Handler
+#define xPortSysTickHandler SysTick_Handler
 
 #endif /* FREERTOS_CONFIG_H */                  
 ```
