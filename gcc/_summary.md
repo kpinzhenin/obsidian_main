@@ -1,3 +1,4 @@
+- специфичные версии gcc. Обозначаются *machine*-gcc-*version* (arm-gcc-noneabi )
 посмотреть пути поиска "#include"
 ```bash
 echo | gcc -xc -E -v -
