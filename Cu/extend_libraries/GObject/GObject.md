@@ -8,7 +8,7 @@ $(pkg-config gobject-2.0 --cflags --libs)
 1. Регистрация нового типа в `системе типов`
 	 Регистрация класса производится функцией [[g_type_register_static ()]] которая возвращает структуру типа `GType` - которая возвращается при вызове функции `<namespace name>_<name>_get_type()` которая будет обернута в макрос `<NAMESPACE NAME>_TYPE_NAME ()`. 
 	Cамый примечательный это аргумент функции [[GTypeInfo]]. Структура должна быть создана перед "регистрацией"
-2. `Система типов` выделяет память для "собственного" класса и экземпляра класса. По сути это делает функция `g_type_register_static(G_TYPE_OBJECT, "<Name space><Name>, *GTypenfo, 0 )`. Выделяемая память описывается в структуре типа GTypeInfo.
+2. `Система типов` выделяет память для "собственного" класса и экземпляра класса. По сути это делает функция `g_type_register_static(G_TYPE_OBJECT, "<Name space><Name>, *GTypeInfo, 0 )`. Выделяемая память описывается в структуре типа GTypeInfo.
 3. Инициализация Класса. объявление функции `<namespace name>_<name>_class_init( <Namespace name><Name>Class *class )`
 4. Инициализация экземпляра класса. `<namespace name>_<name>_init (<Namespace name><Name> *self )`
 
