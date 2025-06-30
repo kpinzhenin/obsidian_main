@@ -8,17 +8,17 @@ $(pkg-config gobject-2.0 --cflags --libs)
 1. Регистрация нового типа в `системе типов`
 	 Регистрация класса производится функцией [[g_type_register_static ()]] которая возвращает структуру типа `GType` - которая возвращается при вызове функции `<namespace name>_<name>_get_type()` которая будет обернута в макрос `<NAMESPACE NAME>_TYPE_NAME ()`. 
 	Cамый примечательный это аргумент функции [[GTypeInfo]]. Структура должна быть создана перед "регистрацией"
-2. `Система типов` выделяет память для "собственного" класса и экземпляра класса. По сути это делает функция `g_type_register_static(G_TYPE_OBJECT, "<Name space><Name>, *GTypeInfo, 0 )`. Выделяемая память описывается в структуре типа GTypeInfo.
+2. `Система типов` выделяет память для "собственного" класса и экземпляра класса. По сути это делает функция `g_type_register_static(G_TYPE_OBJECT, "<Name space><Name>, *GTypeInfo, 0 )`. Выделяемая память описывается в структуре типа [[GTypeInfo]].
 3. Инициализация Класса. объявление функции `<namespace name>_<name>_class_init( <Namespace name><Name>Class *class )`
 4. Инициализация экземпляра класса. `<namespace name>_<name>_init (<Namespace name><Name> *self )`
 
 Весь вышеописанный процесс упрощается макросом `G_DEFINE_TYPE(<Name space><Name>, <name_space>_<name>, G_TYPE_OBJECT)`. 	
-	Макрос применяется после опеределения:
+	Макрос применяется после определения:
 	 -  структуры класса`_<Namespace name><Name>Class` псевдонимом `<Namespace name><Name>Class`. Не нужно в случае объявления DERIVABLE класса макросом `G_DECLARE_DERIVABLE_TYPE`
 	 - структуры экземпляра класса `_<Namespace name><Name>` псевдонимом `<NameSpace><Name>`
 
 Для определения законченного типа ( который не будет порождать производные типы ) используется макрос `G_DECLARE_FINAL_TYPE`.
-	При этом все равно нужно объявлять макрос для "получения типа" и структуру, опичывающую "потомка класса". Порядок вызовы следующий:
+	При этом все равно нужно объявлять макрос для "получения типа" и структуру, опиcывающую "потомка класса". Порядок вызовы следующий:
 	  - `#define <Namespace name>_TYPE_<name> (<namespace name>_<name>_get_type() )`
 	  - `G_DECLARE_FINAL_TYPE (<Namespace name><Name>, <namespace name>_<name>, <NAMESPACE_NAME>, <NAME>, GObject )`
 	  - `struct _<Namespace name><Name> { GObject parent; <self type field name>; }`
@@ -32,7 +32,8 @@ $(pkg-config gobject-2.0 --cflags --libs)
 	  - макрос `<SPACENAME NAME_IS_<NAME>()` проверяет является ли `obj` экземпляром класса `<Spacename name>`
 	  - определение класса `_<Spacename name><Name>Class`
 
-GObject instance is created with `g_object_new` function. GObject has not only instances but also classes (подразумевается, что память под объект класса выделяется при первом вызове). однако `g_object_new` возвращает указатель только на сам экземпляр класса, но не на сам класс.
+GObject instance is created with `g_object_new` function. GObject has not only instances but also classes (подразумевается, что память под объект класса выделяется при первом вызове). однако `g_object_new` возвращает указатель только на созданный экземпляр класса, но не на сам класс.
+
 - A class of GObject is created at the first call of `g_object_new`. And there exists only one GObject class.
 - GObject instance is created whenever `g_object_new` is called. So, two or more GObject instances can exist.
 `g_object_unref` decreases the reference count by 1. If the reference count drops to zero, the instance destroys itself.
