@@ -8,7 +8,7 @@ GTK не является одним инструментом, скорее эт
 - [ATK](https://docs.gtk.org/atk/) — Accessibility toolkit to implement support for screen readers and other tools (GTK3 only
  
 Они оказывается бывают разных версий, последняя - GTK4.
-Однако есть GTK2. и по ней есть неплохая вроде как книга:
+Однако есть GTK2. и по ней есть неплохая, вроде как, книга:
 
 *Глава 16 из книги “Нейл Мэтью, Ричард Стоунс — Основы программирования в Linux, 4-е издание, пер. с англ.”. _Материал переработан под GTK+ 3. https://librebay.github.io/index.html
 
