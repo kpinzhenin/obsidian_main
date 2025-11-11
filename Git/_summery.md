@@ -14,9 +14,9 @@ git config --global user.mail "mail"
 Индексирование (`cached`/ `staged`) - отслеживание изменений производимых в файле.
 
 Если версии локального и удаленного репозитория отличаются, необходимо:
-- синхронизировать их через `git` [[fitch]] `<remote_rep> <remote_branch>`
+- синхронизировать их через `git` [[fetch]] `<remote_rep> <remote_branch>`
 - после перейти на ветку main ( ту в которую будем сливать изменения) `git` [[checkout]] `main`
-- и слить ветки `git` [[merge]] `<remote_rep/branch>
+- и слить ветки `git` [[Git/merge]] `<remote_rep/branch>
 
 удалить файлы удаленного репозитория:
 	```
