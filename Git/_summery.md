@@ -18,7 +18,7 @@ git config --global user.mail "mail"
 - после перейти на ветку main ( ту в которую будем сливать изменения) `git` [[checkout]] `main`
 - и слить ветки `git` [[Git/merge]] `<remote_rep/branch>
 
-удалить файлы удаленного репозитория:
+удалить файлы из удаленного репозитория:
 	```
 	git rm --cached package-lock.json
 	git commit
