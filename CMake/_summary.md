@@ -33,8 +33,82 @@ target_include_directories( targetName
 )
 ```
 используется следующим образом
-```c
+```CMake
 include_directories( include )
 add_executable( simple_out
 	            main.c )
+```
+
+### Запуск из командной строки
+#### для конфигурации отдельного скрипта в каждом src
+/home/k.pinzhenin/cmake_ex/src_bld_ex/
+├── build/
+├── src/
+│   └── CMakeLists.txt
+├── ui_dir/
+│   ├── build/
+│   ├── src/
+│   │   └── CMakeLists.txt
+
+``` C
+/* /home/k.pinzhenin/cmake_ex/src_bld_ex/src/CMakeLists.txt */
+cmake_minimum_required( VERSION 3.20 )
+project( cmake_dir_ex )
+
+message( "inside main cmake src[${CMAKE_CURRENT_SOURCE_DIR} and bld[${CMAKE_CURRENT_BINARY_DIR}] " )
+
+# simple call sub script
+add_subdirectory( ../ui_dir/src ../ui_dir/build)
+//===============================================================
+/* /home/k.pinzhenin/cmake_ex/src_bld_ex/ui_dir/src/CMakeLists.txt */
+cmake_minimum_required( VERSION 3.20 )
+#project( cmake_dir_ex )
+
+message( "inside SUB cmake src[${CMAKE_CURRENT_SOURCE_DIR} and bld[${CMAKE_CURRENT_BINARY_DIR}] " )
+```
+```bash
+k.pinzhenin@SIS009498 UCRT64 ~/cmake_ex/src_bld_ex
+$ cmake -Ssrc/ -Bbuild/
+
+inside main cmake src[/home/k.pinzhenin/cmake_ex/src_bld_ex/src and bld[/home/k.pinzhenin/cmake_ex/src_bld_ex/build]
+inside SUB cmake src[/home/k.pinzhenin/cmake_ex/src_bld_ex/ui_dir/src and bld[/home/k.pinzhenin/cmake_ex/src_bld_ex/ui_dir/build]
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/k.pinzhenin/cmake_ex/src_bld_ex/build
+```
+
+#### для главного скрипта в  корне и отдельных в каждом src
+/home/k.pinzhenin/cmake_ex/src_bld_ex/
+├── CMakeLists.txt
+├── build/
+├── src/│   
+├── ui_dir/
+│   ├── build/
+│   ├── src/
+│   │   └── CMakeLists.txt
+``` C
+/* /home/k.pinzhenin/cmake_ex/src_bld_ex/CMakeLists.txt */
+cmake_minimum_required( VERSION 3.20 )
+project( cmake_dir_ex )
+
+message( "inside main cmake src[${CMAKE_CURRENT_SOURCE_DIR} and bld[${CMAKE_CURRENT_BINARY_DIR}] " )
+
+# simple call sub script
+add_subdirectory( ui_dir/src ui_dir/build)
+//===============================================================
+/* /home/k.pinzhenin/cmake_ex/src_bld_ex/ui_dir/src/CMakeLists.txt */
+cmake_minimum_required( VERSION 3.20 )
+#project( cmake_dir_ex )
+
+message( "inside SUB cmake src[${CMAKE_CURRENT_SOURCE_DIR} and bld[${CMAKE_CURRENT_BINARY_DIR}] " )
+```
+``` bash
+k.pinzhenin@SIS009498 UCRT64 ~/cmake_ex/src_bld_ex/build
+$ cmake ..
+inside main cmake src[/home/k.pinzhenin/cmake_ex/src_bld_ex and bld[/home/k.pinzhenin/cmake_ex/src_bld_ex/build]
+inside SUB cmake src[/home/k.pinzhenin/cmake_ex/src_bld_ex/ui_dir/src and bld[/home/k.pinzhenin/cmake_ex/src_bld_ex/build/ui_dir/build]
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/k.pinzhenin/cmake_ex/src_bld_ex/build
+
 ```
