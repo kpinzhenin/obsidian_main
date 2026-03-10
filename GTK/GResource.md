@@ -19,3 +19,5 @@ glib-compile-resources.exe --target=rs_resource.h --generate-header resorces.gre
  </gresources>
 ```
 `.ui` файл тоже должен существовать
+
+Путь в .xml файле указывается относительно .xml файла...а не места запуска `glib-compile`

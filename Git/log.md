@@ -7,3 +7,7 @@ git log --oneline
 ```bash
 git log --graph --oneline
 ```
+Все файлы, когда-либо существовавшие в репозитории
+```bash
+git log --pretty=format: --name-only | sort -u
+```

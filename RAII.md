@@ -1,0 +1,1 @@
+**Resource Acquisition Is Initialization** - принцип по которому ресурсы инициализируются, когда объявляются.

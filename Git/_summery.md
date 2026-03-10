@@ -8,7 +8,7 @@ git config --global user.name "Uset Name"
 git config --global user.mail "mail"
 ```
 разделяется на три "места хранения" с несколькими состояниями:
- - Рабочий каталог (working directory)
+ - Рабочий каталог (`working directory`)
  - Индекс ( Staged Area ) / Кэш ( Cached )
  - ( Commited )
 Индексирование (`cached`/ `staged`) - отслеживание изменений производимых в файле.
