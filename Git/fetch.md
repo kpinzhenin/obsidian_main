@@ -1,2 +1,4 @@
 Загружает коммиты, файлы и ссылки из удаленного репозитория.
-`git fitch <remote_rep> <branch>`
+```bash
+git fitch <remote_rep> <branch>
+```

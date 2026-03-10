@@ -8,7 +8,7 @@ git config --global user.name "Uset Name"
 git config --global user.mail "mail"
 ```
 разделяется на три "места хранения" с несколькими состояниями:
- - Рабочий каталог (working directory)
+ - Рабочий каталог (`working directory`)
  - Индекс ( Staged Area ) / Кэш ( Cached )
  - ( Commited )
 Индексирование (`cached`/ `staged`) - отслеживание изменений производимых в файле.
@@ -19,8 +19,12 @@ git config --global user.mail "mail"
 - и слить ветки `git` [[Git/merge]] `<remote_rep/branch>
 
 удалить файлы из удаленного репозитория:
-	```
+	```bash
 	git rm --cached package-lock.json
 	git commit
 	```
-
+получение удаленной ветки и подмена текущей
+```bash
+git fetch <origin>
+git reset --hard <origin>
+```

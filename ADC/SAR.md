@@ -1,0 +1,1 @@
+SAR( Successive Approximation Register ) - регистр последовательного приближения.
