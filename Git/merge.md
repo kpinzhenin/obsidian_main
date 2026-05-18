@@ -2,4 +2,5 @@
 ```bash
 git merge <branch_name>
 git merge <commit_num>
+git merge -X theirs feature # Сливаем feature в main конфликты в пользу feature
 ```

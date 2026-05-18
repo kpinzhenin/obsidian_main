@@ -3,3 +3,7 @@
 ```bash
 git show <branch_name> --name-only
 ```
+Список отслеживаемых файлов
+```bash
+git ls-files
+```

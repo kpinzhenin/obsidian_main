@@ -7,5 +7,17 @@ git remote -v` - показать удаленные репозитории
 git remote add <origin> <URL> - добавить удаленный репозиторий
 ```
 
-`git remote show <origin>` - просмотр удаленного репозитория
-`git remote rm <origin name>` - удаление удаленного репозитория
+Обновить состояние удаленного репозитория:
+```bash
+git remote update
+```
+
+Просмотр удаленного репозитория:
+```bash
+git remote show <origin>
+``` 
+
+Удаление удаленного репозитория
+```bash
+git remote rm <origin name>
+``` 

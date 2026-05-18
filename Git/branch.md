@@ -10,3 +10,7 @@ git branch <branch_name>
 ```bash
 git checkout <branch_name>
 ```
+Удаление ветки
+```bash
+git branch -d <branch_name>
+```
