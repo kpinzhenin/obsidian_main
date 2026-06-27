@@ -23,4 +23,8 @@ git config --global user.mail "mail"
 	git rm --cached package-lock.json
 	git commit
 	```
-
+получение удаленной ветки и подмена текущей
+```bash
+git fetch <origin>
+git reset --hard <origin>
+```
