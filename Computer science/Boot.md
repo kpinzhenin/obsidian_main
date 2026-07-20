@@ -3,7 +3,7 @@
 Master boot record( MBR ) = Boot record = Boot sector = Bootloader
 Предполагается, что 1 сектор = 512 байт. современный размер сектора, я так думаю - 4KB.
 Загрузчик ( `bootloader` ) делится на 3 части:
- - bootstrap ( 440 bytes )
+ - bootstrap ( 440 bytes ), DeepSeek называет его *"First-stage bootloader"*
  - bootloader ( 31 KB )
  - Часть ядра операционной системы
  Оказывается 512 байт связаны с тем, что BIOS не умеет читать дальше первого сектора 
