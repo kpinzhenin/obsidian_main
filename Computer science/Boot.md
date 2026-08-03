@@ -1,7 +1,7 @@
 Загрузка операционной системы начинается с *загрузочного сектора* `boot sector`.
 `boot sector` описывается как первые 512 байт на жестком диске, плюс 31KB. В каждом разделе резервируется место ( 512b + 31KB ) под `boot-related information( VBR Volume Boot Record или все таки Virtual Boot Record )` и это не MBR!. MBR как раз одна на весь HDD.
 Master boot record( MBR ) = Boot record = Boot sector = Bootloader
-Предполагается, что 1 сектор = 512 байт. современный размер сектора походу все так 4 KB.
+Предполагается, что 1 сектор = 512 байт. современный размер сектора походу все таки 4 KB.
 Загрузчик ( `bootloader` ) делится на 3 части:
  - bootstrap ( 440 bytes ), DeepSeek называет его *"First-stage bootloader"*
  - bootloader ( 31 KB ) это как я понял и есть VBR каждого раздела
