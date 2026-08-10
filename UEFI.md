@@ -1,0 +1,1 @@
+Unified Extensible Firmware Interface. Пришел на смену BIOS
