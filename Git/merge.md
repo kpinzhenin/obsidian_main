@@ -8,4 +8,7 @@ git merge -X theirs feature # Сливаем feature в main конфликты 
 ```bash
 git checkout --theirs -- <file_name> # Берет версию файла из сливаемой ветки В СЛУЧАЕ КОНФЛИКТА
 git checkout <branch_name> -- <file_name>  #Берет версию файла из ветки всегда
+git checkout HEAD -- <file_name> # откатывает изменения 
+git restore <file_name> # тоже откатывает изменения
+
 ```

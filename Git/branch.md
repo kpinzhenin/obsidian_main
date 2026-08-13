@@ -14,3 +14,12 @@ git checkout <branch_name>
 ```bash
 git branch -d <branch_name>
 ```
+Удаление ветки в remote репозитории производится командой [[push]]
+Посмотреть ветки remote репозитория
+```bash
+git branch -r
+```
+Посмотреть вообще все ветки и remote и local
+```bash
+git branch -a
+```

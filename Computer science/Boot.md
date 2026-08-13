@@ -7,5 +7,4 @@ Master boot record( MBR ) = Boot record = Boot sector = Bootloader
  - bootloader ( 31 KB ) это как я понял и есть `VBR( Volume Boot Record)` каждого раздела
  - Часть ядра операционной системы из состава кода основного раздела
  Оказывается 512 байт связаны с тем, что BIOS не умеет читать дальше первого сектора.
-every partition has 512 bytes + 31 KB of space reserved for booting
-purposes, and this space is hidden from the user.
+every partition has 512 bytes + 31 KB of space reserved for booting purposes, and this space is hidden from the user.

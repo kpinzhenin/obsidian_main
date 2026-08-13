@@ -17,12 +17,15 @@ git remote update
 git branch -r
 ```
 
-Просмотр удаленного репозитория:
+
 ```bash
-git remote show <origin>
+git remote show <origin> # Просмотр удаленного репозитория:
 ``` 
 
-Удаление удаленного репозитория
 ```bash
-git remote rm <origin name>
+git remote rm <origin name> # Удаление remote репозитория
 ``` 
+
+```bash
+git remote prune <origin name> # обновление кэша remote репозитория
+```
