@@ -5,4 +5,4 @@ EFI System Partition
 		- <OS_vendor_name>
 			- <boot_loader_files>
 После создания загрузчик должен быть установлен в:
-`/EFI/<os_vendor_name>/`
+`/EFI/<os_vendor_name>/<boot_loder's files`

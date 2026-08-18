@@ -19,7 +19,7 @@ git config --global user.mail "mail"
 - и слить ветки `git` [[Git/merge]] `<remote_rep/branch>
 
 удалить файлы из удаленного репозитория:
-	```
+	```bash
 	git rm --cached package-lock.json
 	git commit
 	```

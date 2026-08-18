@@ -6,3 +6,6 @@ git rm <file_name> - удаляет файл из рабочего катало�
 	`git rm --cached <file_name>`
 	`git commit`
 	Следующим коммитом история должна обновиться
+```bash
+git rm --staged <file_name> # удалить файл из индекса 
+```
