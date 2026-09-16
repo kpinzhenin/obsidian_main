@@ -3,7 +3,7 @@
 https://docs.fedoraproject.org/en-US/quick-docs/dnf/
 
 ```bash
- $ dnf search <packagename> # поиск пакета
+$ dnf search <packagename> # поиск пакета
 ```
 ```bash
 $ sudo dnf install <packagename> # установка пакета
@@ -15,3 +15,7 @@ $ sudo dnf remove packagename # удаление пакета
 ```bash
 dnf list installed | grep git # проверяет список установленных приложений
 ```
+ Примечательно, что обновление через терминал командами `dnf` и `GNOME Software` не синхронизируются автоматически, по-этому для того чтобы удалить скаченне, но не установленные пакеты из `GNOME Software` применяется команда: 
+ ```bash
+ sudo dnf offline clean # удаляет все скаченные, но еще не примененные пакеты
+ ```
